@@ -9,4 +9,5 @@ def main():
     place = input("Please enter a location >")
     print("The " + noun + " " + verb + " to the " + adjective + " " + place)
 
+
 main()
