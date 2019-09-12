@@ -7,5 +7,7 @@ def main():
     A = 34000000
     B = 186000
     c = A / B
-    print(c + "Seconds!")
+    print("{} Seconds!".format(c))
+
+
 main()
