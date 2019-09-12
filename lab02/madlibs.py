@@ -1,6 +1,7 @@
 # Fill in the blanks Mad Libs Game
 # Enter in 4 words and it'll make a sentence!
 
+
 def main():
     noun = input("Please enter a noun >")
     verb = input("Please enter a verb >")
