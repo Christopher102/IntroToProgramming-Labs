@@ -7,4 +7,5 @@ def main():
         if n % 2 == 0:
             print(n)
 
+
 main()
