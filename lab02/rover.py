@@ -4,10 +4,10 @@
 
 def main():
     print("Curiosity transmitts pictures to Earth in")
-    A = 34000000
-    B = 186000
-    c = A / B
-    print("{} Seconds!".format(c))
+    DistanceMars = 34000000
+    SpeedofTransmit = 186000
+    Time = DistanceMars / SpeedofTransmit
+    print("{} Seconds!".format(Time))
 
 
 main()
