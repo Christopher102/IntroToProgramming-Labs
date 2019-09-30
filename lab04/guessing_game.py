@@ -4,6 +4,43 @@
 import random
 import time
 
+# This defines the "mouse" path
+
+
+def mouse():
+    print("\n"*100)
+    print("What is used with a keyboard for a computer?")
+    guess = input("What is the answer? -> ")
+    guess = guess.lower()
+    if guess == "mouse":
+        print("Congratulations! You've Guessed it!")
+        print("My animal was a Donkey!")
+    elif guess == "exit":
+        return None
+    else:
+        print("\n"*10)
+        print("I'm sorry! That was not my animal! Please try again!")
+        time.sleep(3)
+        mouse()
+# This defines the "phoenix" path
+
+
+def phoenix():
+    print("\n"*100)
+    print("This animal bursts into flames and is reborn from it's own ashes.")
+    guess = input("What is this animal? -> ")
+    guess = guess.lower()
+    if guess == "phoenix":
+        print("Congratulations! You've Guessed it!")
+        print("My animal was a Phoenix!")
+    elif guess == "exit":
+        return None
+    else:
+        print("\n"*10)
+        print("I'm sorry! That was not my animal! Please try again!")
+        time.sleep(3)
+        phoenix()
+
 # This defines the "Cat" path, where the computer has selected "Cat"
 
 
@@ -15,6 +52,8 @@ def cat():
     if guess == "cat":
         print("Congratulations! You've Guessed it!")
         print("My animal was a Tiger!")
+    elif guess == "exit":
+        return None
     else:
         print("\n"*10)
         print("I'm sorry! That was not my animal! Please try again!")
@@ -33,6 +72,8 @@ def tiger():
     if guess == "tiger":
         print("Congratulations! You've Guessed it!")
         print("My animal was a Tiger!")
+    elif guess == "exit":
+        return None
     else:
         print("\n"*10)
         print("I'm sorry! That was not my animal! Please try again!")
@@ -50,6 +91,8 @@ def dog():
     if guess == "dog":
         print("Congratulations! You've Guessed it!")
         print("My animal was a Dog!")
+    elif guess == "exit":
+        return None
     else:
         print("\n"*10)
         print("I'm sorry! That was not my animal! Please try again!")
@@ -68,11 +111,15 @@ def donkey():
     if guess == "donkey":
         print("Congratulations! You've Guessed it!")
         print("My animal was a Donkey!")
+    elif guess == "exit":
+        return None
     else:
         print("\n"*10)
         print("I'm sorry! That was not my animal! Please try again!")
         time.sleep(3)
         donkey()
+
+# This is the function that selects an animal for the player to guess
 
 
 def game():
@@ -81,7 +128,7 @@ def game():
     animal3 = "Dog"
     animal4 = "Cat"
     animal5 = "Mouse"
-    animal6 = "Hawk"
+    animal6 = "Phoenix"
     animals = [animal1, animal2, animal3, animal4, animal5, animal6]
     animals = random.choice(animals)
     print(animals)
@@ -96,6 +143,6 @@ def game():
     elif animals == animal5:
         mouse()
     elif animals == animal6:
-        hawk()
+        phoenix()
 
 game()
