@@ -4,6 +4,8 @@
 # Created: 2019-10-03
 
 import re
+unames = []
+print(unames)
 
 
 def names():
@@ -45,22 +47,25 @@ def passwordcheck(passwd):
         return passwd
 
 
-def passwordcaptial(passwd):
-    if passwd.lower() == passwd:
-        print("Please use capitals in your password!")
-        return passwordcaptial(passwordlength(password()))
-    elif passwd.upper() == passwd:
-        print("Please use lowercase in your password!")
-        return passwordcaptial(passwordlength(password()))
-    else:
-        print("The force is strong with this one.")
-        return passwd
-
-
 def main():
-    Username = user(names())
-    passfinal = passwordcheck(password())
-    print("Account Created. Your new email is " + Username + "@marist.edu")
+    loop = True
+    namecounter = 0
+    while loop is True:
+        Username = user(names())
+        passfinal = passwordcheck(password())
+        print("Account Created. Your new email is " + Username + "@marist.edu")
+        namecounter += 1
+        print(namecounter)
+        unames.append(Username)
+        print(unames)
+        restart = input("Input another name? (Y/N): ")
+        if restart.lower() == "y":
+            loop = True
+        elif restart.lower() == "n":
+            print(unames)
+            loop = False
+        else:
+            restart = input("Please input Y or N")
 
 
 main()
