@@ -5,7 +5,7 @@
 
 import re
 unames = []
-print(unames)
+upasswords = []
 
 
 def names():
@@ -16,7 +16,9 @@ def names():
 
 
 def user(fullname):
-    userN = str(fullname[0] + "." + fullname[1] + "1")
+    userN = str(fullname[0] + "." + fullname[1])
+    userN += str(len([name for name in unames if name.startswith(userN)]) + 1)
+    unames.append(userN)
     return userN
 
 
@@ -51,18 +53,16 @@ def main():
     loop = True
     namecounter = 0
     while loop is True:
-        Username = user(names())
+        Username = str(user(names()))
         passfinal = passwordcheck(password())
         print("Account Created. Your new email is " + Username + "@marist.edu")
         namecounter += 1
-        print(namecounter)
-        unames.append(Username)
-        print(unames)
+        print("There are currently {} usernames".format(namecounter))
+        upasswords.append(passfinal)
         restart = input("Input another name? (Y/N): ")
         if restart.lower() == "y":
             loop = True
         elif restart.lower() == "n":
-            print(unames)
             loop = False
         else:
             restart = input("Please input Y or N")
