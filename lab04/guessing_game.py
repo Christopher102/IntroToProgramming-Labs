@@ -14,8 +14,8 @@ def mouse():
     guess = guess.lower()
     if guess == "mouse":
         print("Congratulations! You've Guessed it!")
-        print("My animal was a Donkey!")
-    elif guess == "exit":
+        print("My animal was a Mouse!")
+    elif guess[:1] == "q":  # Defines the "Exit"
         return None
     else:
         print("\n"*10)
@@ -33,7 +33,7 @@ def phoenix():
     if guess == "phoenix":
         print("Congratulations! You've Guessed it!")
         print("My animal was a Phoenix!")
-    elif guess == "exit":
+    elif guess[:1] == "q":
         return None
     else:
         print("\n"*10)
@@ -51,8 +51,8 @@ def cat():
     guess = guess.lower()
     if guess == "cat":
         print("Congratulations! You've Guessed it!")
-        print("My animal was a Tiger!")
-    elif guess == "exit":
+        print("My animal was a Cat!")
+    elif guess[:1] == "q":
         return None
     else:
         print("\n"*10)
@@ -72,7 +72,7 @@ def tiger():
     if guess == "tiger":
         print("Congratulations! You've Guessed it!")
         print("My animal was a Tiger!")
-    elif guess == "exit":
+    elif guess[:1] == "q":
         return None
     else:
         print("\n"*10)
@@ -91,7 +91,7 @@ def dog():
     if guess == "dog":
         print("Congratulations! You've Guessed it!")
         print("My animal was a Dog!")
-    elif guess == "exit":
+    elif guess[:1] == "q":
         return None
     else:
         print("\n"*10)
@@ -111,7 +111,7 @@ def donkey():
     if guess == "donkey":
         print("Congratulations! You've Guessed it!")
         print("My animal was a Donkey!")
-    elif guess == "exit":
+    elif guess[:1] == "q":
         return None
     else:
         print("\n"*10)
@@ -133,7 +133,7 @@ def game():
     animals = random.choice(animals)
     print(animals)
     if animals == animal1:
-        donkey()            
+        donkey()
     elif animals == animal2:
         tiger()
     elif animals == animal3:
@@ -144,5 +144,6 @@ def game():
         mouse()
     elif animals == animal6:
         phoenix()
+
 
 game()
