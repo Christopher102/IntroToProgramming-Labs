@@ -35,17 +35,29 @@ def do_loop():
                 num1 = int(input("Enter the first number: "))
                 num2 = int(input("Enter the second number: "))
                 if cmd == "add":
-                    print(num1 + num2)
+                    print("Your value is:", num1 + num2)
                 elif cmd == "sub":
-                    print(num1 - num2)
+                    print("Your value is:", num1 - num2)
                 elif cmd == "mult":
-                    print(num1 * num2)
+                    print("Your value is:", num1 * num2)
                 elif cmd == "div":
-                    print(num1 / num2)
+                    try:
+                        division = num1 / num2
+                        print("Your value is:", division)
+                    except ZeroDivisionError:
+                        print("\nError. Cannot Divide by Zero.\n")
+                        division = 0
                 else:
                     print("\nThat is not a valid command.")
+                    print('''\nRemember, your commands are:
+add
+sub
+mult
+div
+quit\n''')
             except ValueError:
-                print("Please enter a number")
+                print("\nError. Numbers only, please.\n")
+                continue
 
 
 def main():
