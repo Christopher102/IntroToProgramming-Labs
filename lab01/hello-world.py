@@ -3,9 +3,9 @@
 # Date: August 29th, 2019
 
 
-def main ():
-    print ("Hello World")
-    print ("Goodbye!")
+def main():
+    print("Hello World")
+    print("Goodbye!")
 
 
 main()
