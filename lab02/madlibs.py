@@ -3,11 +3,17 @@
 
 
 def main():
-    noun = input("Please enter a noun >")
-    verb = input("Please enter a verb >")
-    adjective = input("Please enter an adjective >")
-    place = input("Please enter a location >")
-    print("The " + noun + " " + verb + " to the " + adjective + " " + place)
+    phrases = []
+    count = 0
+    while count != 4:
+        noun = input("Please enter a noun >")
+        verb = input("Please enter a verb >")
+        adjective = input("Please enter an adjective >")
+        place = input("Please enter a location >")
+        phrase = noun, verb, "to the", adjective, place
+        phrases.append(phrase)
+        count += 1
+    print(phrases, end="\n")
 
 
 main()
